@@ -3,3 +3,5 @@
 */asetniop.js
 test/all.js
 test/*_test.js
+*.swp
+*.swo

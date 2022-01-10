@@ -7,10 +7,10 @@ require(['keycodes','keyboard','jquery'],
 
         var keysList = $('#keys'), i;
 
-        for ( code in keycodes ) {
+        for ( code in keycodes.keynames ) {
 
             $('<li>').attr('id', 'key' + code )
-                     .text( keycodes[code] )
+                     .text( keycodes.keynames[code] )
                      .appendTo( keysList );
         }
 
@@ -28,7 +28,7 @@ require(['keycodes','keyboard','jquery'],
 
         function refresh() {
 
-            for ( var i in keycodes ) {
+            for ( var i in keycodes.keycodes ) {
                 var elem = $('#key'+i);
                 if ( keyboard.keys[i].down ) {
                     elem.hasClass('down') || elem.addClass('down');
